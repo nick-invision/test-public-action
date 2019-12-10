@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "ncc build index.js && npm run prepare:helloworld",
-    "prepare:helloworld": "ncc build .github/actions/hello-world/index.js -o .github/actions/hello-world/dist"
+    "test": "echo 'nothing to see here'",
+    "prepare": "ncc build index.js"
   },
   "repository": {
     "type": "git",
@@ -24,8 +23,11 @@
     "@actions/github": "^1.1.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^3.0.6",
+    "@semantic-release/git": "^7.0.18",
     "@zeit/ncc": "^0.20.5",
-    "husky": "^3.1.0"
+    "husky": "^3.1.0",
+    "semantic-release": "^15.13.31"
   },
   "husky": {
     "hooks": {
