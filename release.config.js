@@ -9,5 +9,5 @@ module.exports = {
       }],
     ],
     "dryRun": true,
-    "branch": "develop"
+    "branch": "master"
   }
