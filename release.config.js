@@ -8,5 +8,6 @@ module.exports = {
         ]
       }],
     ],
-    "dryRun": true
+    "dryRun": true,
+    "branch": "develop"
   }
