@@ -8,6 +8,5 @@ module.exports = {
         ]
       }],
     ],
-    "dryRun": true,
     "branch": "master" 
   }
