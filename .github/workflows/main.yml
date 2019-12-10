@@ -20,7 +20,7 @@ jobs:
       - name: Test release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release --dry-run --branch $GITHUB_REF
+        run: npx semantic-release --dry-run --branch ${GITHUB_REF##*/}
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
