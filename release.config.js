@@ -7,5 +7,6 @@ module.exports = {
           {"path": "dist/*", "label": "JS distribution"}
         ]
       }],
-    ]
+    ],
+    "dryRun": true
   }
