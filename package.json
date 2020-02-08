@@ -2,10 +2,8 @@
   "name": "test-public-action",
   "version": "0.0.0-managed-by-semantic-release",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo 'nothing to see here'",
-    "prepare": "ncc build index.js"
+    "prepare": "ncc build src/index.ts"
   },
   "repository": {
     "type": "git",

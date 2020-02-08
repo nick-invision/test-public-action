@@ -1,8 +1,4 @@
 name: Release
-# on:
-#   push:
-#     branches:
-#       - master
 on: ['push']
 jobs:
   release:
@@ -22,6 +18,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release --dry-run --branch ${GITHUB_REF##*/}
       - name: Release
+        run: npx semantic-release # this only runs on master and develop. see .releaserc.js
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
