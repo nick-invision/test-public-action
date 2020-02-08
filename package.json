@@ -2,10 +2,8 @@
   "name": "test-public-action",
   "version": "0.0.0-managed-by-semantic-release",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo 'nothing to see here'",
-    "prepare": "ncc build index.js"
+    "prepare": "ncc build src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -23,6 +21,8 @@
     "@actions/github": "^1.1.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@semantic-release/changelog": "^3.0.6",
     "@semantic-release/git": "^7.0.18",
     "@zeit/ncc": "^0.20.5",
@@ -31,6 +31,7 @@
   },
   "husky": {
     "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "npm run prepare && git add ."
     }
   }
