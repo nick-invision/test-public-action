@@ -17,7 +17,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release --dry-run --branch ${GITHUB_REF##*/}
-      - name: Release
-        run: npx semantic-release # this only runs on master and develop. see .releaserc.js
+      - name: Publish vM.m.p and re-tag vM
+        uses: codfish/semantic-release-action@1c9fc8e
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
